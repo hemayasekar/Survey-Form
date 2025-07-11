@@ -1,0 +1,223 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-image: url("images/purple_wallpaper.jpg");
+  background-size: cover;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+h1,
+p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  /* padding: 2rem 0; */
+  /* border-bottom: 3px solid #3b3b4f; */
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* textarea {
+  max-width: 70%;
+} */
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2.5em;
+  border-radius: 4px;
+  padding-left: 4px;
+
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+
+
+a:link, :visited {
+  color: rgb(255, 255, 255);
+}
+
+a:hover {
+  color: #ff22d3;
+}
+
+
+
+
+
+
+
+/* input[type="submit"],[type="button"] {
+  display: inline;
+  width: 40%;
+  margin: 1em auto;
+  height: 2.5em;
+  font-size: 1.1rem;
+  background-color: #601dcd;
+  border-color: white;
+  min-width: 300px;
+} */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  width: 60%;
+  margin: 1.5em auto;
+}
+
+.button-group input[type="button"],
+.button-group input[type="submit"] {
+  width: 100%;
+  padding: 0.7em;
+  font-size: 1rem;
+  background-color: #601dcd;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-group input:hover {
+  background-color: #7f3ff6;
+}
+
+input[type="file"] {
+  padding: 1px 1px;
+}
+
+.user_type {
+  border: 1px solid #ffffff;
+}
+
+.form-container {
+  background-color: rgba(10, 10, 35, 0.8);
+  padding: 1em;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2em auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.ticket-container {
+  background-color: rgba(10, 10, 35, 0.8);
+  padding: 2em;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 10em auto;
+  text-align: center;
+}
+
+.ticket-options {
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.ticket-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5em;
+  border-radius: 12px;
+  width: 40%;
+  /* cursor: pointer; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.4),
+    inset -4px -4px 10px rgba(206, 251, 28, 0.05);
+}
+
+/* .ticket-card:hover,
+.ticket-card input:checked {
+  background-color: rgba(195, 26, 26, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} */
+
+.ticket-card:hover {
+  transform: scale(1.05); /* pop-out effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* glow */
+  background-color: rgba(255, 20, 243, 0.046); /* highlight */
+}
+.ticket-card:has(input:checked) {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2),
+    0 10px 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 20, 243, 0.046);
+}
+
+.ticket-card input {
+  display: none;
+}
+
+.ticket-card .icon {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.ticket-card .label {
+  font-size: 1.2em;
+  color: #f5f6f7;
+}
+
+/* body {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slide left on page exit */
+/* .slide-left {
+  transform: translateX(-100%);
+} */
+
+/* Slide right (optional for reverse transitions) */
+/* .slide-right {
+  transform: translateX(100%);
+} */
+
+body {
+  transform: translateX(100%);
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}

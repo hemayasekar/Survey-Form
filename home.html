@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="ticket-container">
+      <h1>This is a Survey Form</h1>
+      <p>Select the catogory to fit in!</p>
+
+      <h2>What type of ticket do you want?</h2>
+      <div class="ticket-options">
+        x
+        <label class="ticket-card" data-link="Teacher_form.html">
+          <input type="radio" name="ticket" value="Teacher" />
+          <div class="icon">
+            <img src="images/Teachers.svg" alt="teacher" />
+          </div>
+          <div class="label">Teacher</div>
+        </label>
+
+        <label class="ticket-card" data-link="student_form.html">
+          <input type="radio" name="ticket" value="student" />
+          <div class="icon">
+            <img src="images/Students.svg" alt="student" />
+          </div>
+          <div class="label">Student</div>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
